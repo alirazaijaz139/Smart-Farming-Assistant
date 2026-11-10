@@ -1,10 +1,13 @@
+from pathlib import Path
+
 import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv(r"C:\Users\User\Desktop\SMIT\Datasets/Crop_recommendation.csv")
+BASE_DIR = Path(__file__).resolve().parent.parent
+df = pd.read_csv(BASE_DIR / "data" / "Crop_recommendation.csv")
 
 FEATURES = ["N", "P", "K", "temperature", "humidity", "ph", "rainfall"]
 X = df[FEATURES]
@@ -21,5 +24,5 @@ pred = model.predict(X_test)
 print("Accuracy:", round(accuracy_score(y_test, pred), 4))
 print(classification_report(y_test, pred))
 
-joblib.dump(model, "ml/crop_model.joblib")
+joblib.dump(model, BASE_DIR / "ml" / "crop_model.joblib")
 print("Model saved to ml/crop_model.joblib")
