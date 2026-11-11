@@ -15,3 +15,9 @@ joblibtorch
 torchvision
 pillow
 
+#for RAG
+pypdf
+chromadb
+sentence-transformers
+groq
+

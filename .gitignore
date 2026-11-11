@@ -5,3 +5,4 @@ __pycache__/
 data/plant_disease/
 data/plantvillage dataset/
 data/*.zip
+rag/chroma_db/
