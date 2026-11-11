@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers import auth, farms, crop
-...
+from .routers import auth, farms, crop, disease
+
+
 
 
 from .database import Base, engine
@@ -22,6 +24,7 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(farms.router)
 app.include_router(crop.router)
+app.include_router(disease.router)
 
 
 @app.get("/")
