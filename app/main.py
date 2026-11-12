@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from .routers import auth, farms, crop
 from .routers import auth, farms, crop, disease
 from .routers import auth, farms, crop, disease, rag
+from .routers import auth, farms, crop, disease, rag, agent
+
 
 
 
@@ -29,6 +31,7 @@ app.include_router(farms.router)
 app.include_router(crop.router)
 app.include_router(disease.router)
 app.include_router(rag.router)
+app.include_router(agent.router)
 
 
 @app.get("/")
