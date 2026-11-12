@@ -12,6 +12,7 @@ python-dotenv
 pandas
 scikit-learn
 joblibtorch
+torch
 torchvision
 pillow
 
@@ -20,4 +21,8 @@ pypdf
 chromadb
 sentence-transformers
 groq
+langgraph
+langchain-groq
+langsmith
+httpx
 

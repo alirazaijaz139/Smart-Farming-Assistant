@@ -40,7 +40,7 @@ ROUTE_PROMPT = """You route questions for a farming assistant. Return ONLY a JSO
 ANSWER_PROMPT = """You are a helpful farming assistant. Use ONLY the tool result below.
 If it has an error or missing values, tell the user exactly what is missing.
 If it has document chunks, answer only from them and say you don't know if they don't cover the question.
-Keep it short and practical."""
+Keep it short and practical.Never mention "the tool" or "tool result". If values are missing, politely ask the user for them in a short list."""
 
 
 def route(state: AgentState) -> dict:

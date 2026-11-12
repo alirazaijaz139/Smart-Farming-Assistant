@@ -1,8 +1,22 @@
+# Python
 venv/
-.env
+test_env/
 __pycache__/
+*.pyc
+
+# Secrets (kabhi push nahi)
+.env
+
+# Database
 *.db
+
+# Datasets aur zip files
 data/plant_disease/
 data/plantvillage dataset/
 data/*.zip
+
+# RAG vector database (python rag/ingest.py se dobara ban jata hai)
 rag/chroma_db/
+
+# Editor
+.vscode/
