@@ -32,17 +32,19 @@ def get_weather(city: str) -> dict:
     try:
         geo = httpx.get(
             "https://geocoding-api.open-meteo.com/v1/search",
-            params={"name": city, "count": 1},
+            params={"name": city, "count": 10},
             timeout=15,
         ).json()
-        if not geo.get("results"):
+        results = geo.get("results") or []
+        if not results:
             return {"error": f"City not found: {city}"}
-        place = geo["results"][0]
+        place = next((r for r in results if r.get("country_code") == "PK"), results[0])
         w = httpx.get(
             "https://api.open-meteo.com/v1/forecast",
             params={
                 "latitude": place["latitude"],
                 "longitude": place["longitude"],
+                "current": "temperature_2m",
                 "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum",
                 "forecast_days": 3,
                 "timezone": "auto",
@@ -59,6 +61,11 @@ def get_weather(city: str) -> dict:
             }
             for i in range(len(d["time"]))
         ]
-        return {"city": place["name"], "country": place.get("country"), "forecast": days}
+        return {
+            "city": place["name"],
+            "country": place.get("country"),
+            "now_c": w.get("current", {}).get("temperature_2m"),
+            "forecast": days,
+        }
     except httpx.HTTPError as e:
         return {"error": f"Weather service failed: {e}"}

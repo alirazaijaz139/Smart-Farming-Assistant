@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smart Farming Assistant</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #f3f7f1; color: #1f2d1f; }
+  [hidden] { display: none !important; }
+  .app, .auth { max-width: 720px; margin: 0 auto; padding: 16px; }
+  .auth { margin-top: 8vh; }
+  header { display: flex; justify-content: space-between; align-items: center; }
+  h1 { font-size: 1.4rem; }
+  nav { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+  .tab { background: #fff; border: 1px solid #c9d8c5; color: #1f2d1f; }
+  .tab.active { background: #2e7d32; color: #fff; border-color: #2e7d32; }
+  .card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  input { padding: 10px; border: 1px solid #c9d8c5; border-radius: 8px; font-size: 1rem; width: 100%; box-sizing: border-box; margin-bottom: 10px; }
+  button { padding: 10px 16px; border: none; border-radius: 8px; background: #2e7d32; color: #fff; font-size: 1rem; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: default; }
+  button.link { background: none; color: #2e7d32; text-decoration: underline; padding: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0 12px; }
+  label { display: block; font-size: .9rem; }
+  .row { display: flex; gap: 8px; }
+  .row input { margin-bottom: 0; }
+  .messages { height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+  .bubble { max-width: 80%; padding: 10px 12px; border-radius: 12px; white-space: pre-wrap; }
+  .bubble.user { align-self: flex-end; background: #2e7d32; color: #fff; }
+  .bubble.assistant { align-self: flex-start; background: #e8f0e5; }
+  .result { margin-top: 12px; padding: 12px; background: #eef6ec; border-radius: 8px; }
+  .preview { display: block; max-width: 260px; margin: 12px 0; border-radius: 8px; }
+  .error { color: #b3261e; }
+  .info { color: #2e7d32; }
+  .muted { color: #5a6b58; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<!-- Login / Register -->
+<div id="auth" class="auth card" hidden>
+  <h1>🌾 Smart Farming Assistant</h1>
+  <h2 id="auth-title">Login</h2>
+  <form id="auth-form">
+    <input id="auth-name" placeholder="Full name" hidden />
+    <input id="auth-email" type="email" placeholder="Email" required />
+    <input id="auth-password" type="password" placeholder="Password" required />
+    <button id="auth-submit">Login</button>
+  </form>
+  <p id="auth-error" class="error"></p>
+  <p id="auth-info" class="info"></p>
+  <button id="auth-toggle" class="link">New here? Create an account</button>
+</div>
+
+<!-- Main app -->
+<div id="app" class="app" hidden>
+  <header>
+    <h1>🌾 Smart Farming Assistant</h1>
+    <button id="logout" class="link">Logout</button>
+  </header>
+  <nav>
+    <button class="tab active" data-tab="chat">💬 Ask</button>
+    <button class="tab" data-tab="crop">🌱 Crop</button>
+    <button class="tab" data-tab="disease">🍃 Leaf disease</button>
+  </nav>
+
+  <section id="tab-chat" class="card">
+    <div id="messages" class="messages"></div>
+    <form id="chat-form" class="row">
+      <input id="chat-input" placeholder="e.g. What is the weather in Faisalabad?" />
+      <button id="chat-send">Send</button>
+    </form>
+  </section>
+
+  <section id="tab-crop" class="card" hidden>
+    <h2>Crop recommendation</h2>
+    <form id="crop-form">
+      <div id="crop-fields" class="grid"></div>
+      <button id="crop-submit">Recommend crop</button>
+    </form>
+    <p id="crop-error" class="error"></p>
+    <div id="crop-result"></div>
+  </section>
+
+  <section id="tab-disease" class="card" hidden>
+    <h2>Leaf disease detection</h2>
+    <p class="muted">Trained on 6 potato and tomato classes using clean PlantVillage images.</p>
+    <input id="leaf-file" type="file" accept="image/jpeg,image/png" />
+    <img id="leaf-preview" class="preview" alt="Selected leaf" hidden />
+    <button id="leaf-detect" disabled>Detect disease</button>
+    <p id="leaf-error" class="error"></p>
+    <div id="leaf-result"></div>
+  </section>
+</div>
+
+<script>
+  // Local backend while developing, deployed backend otherwise.
+  // Replace the Render URL after you deploy the backend.
+  const API_URL =
+    location.hostname === "localhost" || location.hostname === "127.0.0.1"
+      ? "http://127.0.0.1:8000"
+      : "https://YOUR-RENDER-URL.onrender.com";
+
+  const $ = (id) => document.getElementById(id);
+  const getToken = () => localStorage.getItem("token");
+  const setToken = (t) => (t ? localStorage.setItem("token", t) : localStorage.removeItem("token"));
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  async function api(path, { method = "GET", json, form, formData } = {}) {
+    const headers = {};
+    const token = getToken();
+    if (token) headers.Authorization = "Bearer " + token;
+    let body;
+    if (json) {
+      headers["Content-Type"] = "application/json";
+      body = JSON.stringify(json);
+    } else if (form) {
+      body = new URLSearchParams(form);
+    } else if (formData) {
+      body = formData;
+    }
+    const res = await fetch(API_URL + path, { method, headers, body });
+    if (res.status === 401 && token) {
+      setToken(null);
+      render();
+      throw new Error("Session expired. Please log in again.");
+    }
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const d = data.detail;
+      throw new Error(
+        typeof d === "string" ? d : Array.isArray(d) ? d.map((e) => e.msg).join(", ") : "Request failed"
+      );
+    }
+    return data;
+  }
+
+  function render() {
+    const loggedIn = !!getToken();
+    $("auth").hidden = loggedIn;
+    $("app").hidden = !loggedIn;
+  }
+
+  function showResult(container, title, lines) {
+    container.replaceChildren();
+    const box = el("div", "result");
+    box.appendChild(el("h3", "", title));
+    const ul = el("ul");
+    lines.forEach((l) => ul.appendChild(el("li", "", l)));
+    box.appendChild(ul);
+    container.appendChild(box);
+  }
+
+  // ---------- Auth ----------
+  let mode = "login";
+  function setMode(m) {
+    mode = m;
+    const login = m === "login";
+    $("auth-title").textContent = login ? "Login" : "Create account";
+    $("auth-submit").textContent = login ? "Login" : "Register";
+    $("auth-name").hidden = login;
+    $("auth-name").required = !login;
+    $("auth-toggle").textContent = login ? "New here? Create an account" : "Already have an account? Login";
+  }
+  $("auth-toggle").onclick = () => setMode(mode === "login" ? "register" : "login");
+
+  $("auth-form").onsubmit = async (e) => {
+    e.preventDefault();
+    $("auth-error").textContent = "";
+    $("auth-info").textContent = "";
+    $("auth-submit").disabled = true;
+    try {
+      const email = $("auth-email").value;
+      const password = $("auth-password").value;
+      if (mode === "register") {
+        await api("/auth/register", { method: "POST", json: { full_name: $("auth-name").value, email, password } });
+        $("auth-info").textContent = "Account created. Please log in.";
+        setMode("login");
+      } else {
+        const data = await api("/auth/login", { method: "POST", form: { username: email, password } });
+        setToken(data.access_token);
+        render();
+      }
+    } catch (err) {
+      $("auth-error").textContent = err.message;
+    } finally {
+      $("auth-submit").disabled = false;
+    }
+  };
+
+  $("logout").onclick = () => { setToken(null); render(); };
+
+  // ---------- Tabs ----------
+  document.querySelectorAll(".tab").forEach((btn) => {
+    btn.onclick = () => {
+      document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b === btn));
+      ["chat", "crop", "disease"].forEach((t) => ($("tab-" + t).hidden = t !== btn.dataset.tab));
+    };
+  });
+
+  // ---------- Chat ----------
+  function addBubble(role, text) {
+    const b = el("div", "bubble " + role, text);
+    $("messages").appendChild(b);
+    $("messages").scrollTop = $("messages").scrollHeight;
+    return b;
+  }
+  addBubble("assistant", "Hi! Ask me about crops, weather or farming.");
+
+  $("chat-form").onsubmit = async (e) => {
+    e.preventDefault();
+    const text = $("chat-input").value.trim();
+    if (!text) return;
+    addBubble("user", text);
+    $("chat-input").value = "";
+    $("chat-send").disabled = true;
+    const thinking = addBubble("assistant", "Thinking...");
+    try {
+      const data = await api("/agent/chat", { method: "POST", json: { message: text } });
+      thinking.textContent = data.answer;
+    } catch (err) {
+      thinking.textContent = "⚠️ " + err.message;
+    } finally {
+      $("chat-send").disabled = false;
+    }
+  };
+
+  // ---------- Crop ----------
+  const FIELDS = [
+    ["N", "Nitrogen (N)", 90], ["P", "Phosphorus (P)", 42], ["K", "Potassium (K)", 43],
+    ["temperature", "Temperature (°C)", 21], ["humidity", "Humidity (%)", 82],
+    ["ph", "Soil pH", 6.5], ["rainfall", "Rainfall (mm)", 203],
+  ];
+  FIELDS.forEach(([key, label, def]) => {
+    const l = el("label", "", label);
+    const i = el("input");
+    i.type = "number"; i.step = "any"; i.id = "f-" + key; i.value = def; i.required = true;
+    l.appendChild(i);
+    $("crop-fields").appendChild(l);
+  });
+
+  $("crop-form").onsubmit = async (e) => {
+    e.preventDefault();
+    $("crop-error").textContent = "";
+    $("crop-result").replaceChildren();
+    $("crop-submit").disabled = true;
+    try {
+      const payload = {};
+      FIELDS.forEach(([key]) => (payload[key] = Number($("f-" + key).value)));
+      const data = await api("/crop/recommend", { method: "POST", json: payload });
+      showResult($("crop-result"), "Recommended: " + data.recommended_crop,
+        data.top_3.map((r) => r.crop + ": " + (r.confidence * 100).toFixed(1) + "%"));
+    } catch (err) {
+      $("crop-error").textContent = err.message;
+    } finally {
+      $("crop-submit").disabled = false;
+    }
+  };
+
+  // ---------- Leaf disease ----------
+  $("leaf-file").onchange = () => {
+    const f = $("leaf-file").files[0];
+    $("leaf-result").replaceChildren();
+    $("leaf-error").textContent = "";
+    $("leaf-detect").disabled = !f;
+    $("leaf-preview").hidden = !f;
+    if (f) $("leaf-preview").src = URL.createObjectURL(f);
+  };
+
+  $("leaf-detect").onclick = async () => {
+    const f = $("leaf-file").files[0];
+    if (!f) return;
+    $("leaf-detect").disabled = true;
+    $("leaf-error").textContent = "";
+    try {
+      const formData = new FormData();
+      formData.append("file", f);
+      const data = await api("/disease/detect", { method: "POST", formData });
+      showResult($("leaf-result"),
+        (data.confident ? "Prediction: " : "Not sure, best guess: ") + data.prediction,
+        data.top_3.map((r) => r.label + ": " + (r.confidence * 100).toFixed(1) + "%"));
+    } catch (err) {
+      $("leaf-error").textContent = err.message;
+    } finally {
+      $("leaf-detect").disabled = false;
+    }
+  };
+
+  render();
+</script>
+</body>
+</html>

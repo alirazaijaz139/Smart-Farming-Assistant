@@ -35,7 +35,10 @@ ROUTE_PROMPT = """You route questions for a farming assistant. Return ONLY a JSO
   (numbers; use null for any value the user did not give).
 - weather: user asks about weather. params: {"city": "<city name>"}
 - knowledge: farming how-to questions (sowing, irrigation, pests, fertilizer). params: {}
-- chat: greetings or anything else. params: {}"""
+- chat: greetings or anything else. params: {}
+Users are in Pakistan. For weather, expand abbreviations and nicknames to the full city name
+(FSD -> Faisalabad, LHR -> Lahore, ISB -> Islamabad, KHI -> Karachi, RWP -> Rawalpindi).
+If the user did not name any city, use null for the city."""
 
 ANSWER_PROMPT = """You are a helpful farming assistant. Use ONLY the tool result below.
 If it has an error or missing values, tell the user exactly what is missing.
