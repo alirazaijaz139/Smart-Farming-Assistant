@@ -1,0 +1,48 @@
+INTEGRATED PEST MANAGEMENT (IPM) | PUNJAB, PAKISTAN FARMING NOTES
+
+What is IPM?
+Integrated pest management combines prevention, field scouting, conservation of natural enemies and targeted control. Inspect several representative parts of the field, including edges and interior. Record crop, district, growth stage, symptoms, pest counts, and which plant parts were inspected. Keep a separate record of hotspots. Take photos of the whole plant and both sides of affected leaves when asking for identification.
+
+What is ETL?
+Economic threshold level (ETL) is the pest level used to decide when control is needed to prevent economic loss. Compare like with like. A per-leaf count, per-tiller count, trap catch and percentage of damaged plants are different measurements. Use the local sampling protocol and current district advisory to interpret a count.
+Source: Punjab Agriculture Department, Economic Threshold Levels
+https://agripunjab.gov.pk/node/9182
+
+Wheat (gandum)
+Aphids (tela) gather on tillers and heads. Check several tillers, note predators such as ladybirds, and compare the count with Punjab's published reference of 25 aphids per tiller. Yellow rust (peeli kungi) can appear as stripes of yellow-orange pustules. Ask for confirmation if symptoms are unclear. Plan future sowing with locally recommended rust-resistant varieties.
+
+Rice (dhan)
+Stem borer injury can cause dead hearts in vegetative rice and white heads at the reproductive stage. Inspect affected tillers and check for signs of boring. For field rice, Punjab lists 5% dead hearts as a scouting reference for borers. Leaf folder caterpillars feed inside folded leaves. Bacterial leaf blight (BLB) is a disease. Check spreading leaf lesions with local extension staff before deciding on control.
+Sources: Punjab Agriculture Department, Economic Threshold Levels and scouting guides
+https://agripunjab.gov.pk/node/9182
+https://agripunjab.gov.pk/pw_literature
+
+Cotton (kapas)
+Check leaf undersides for whitefly and jassid. Punjab lists 5 whitefly adults or nymphs combined per leaf and 1 jassid adult or nymph per leaf. Check bolls for pink bollworm larvae and use pheromone traps to monitor moth activity. Punjab's boll-sampling reference for pink bollworm is 5 larvae per 100 bolls.
+
+Before using a pesticide
+Confirm the crop and pest, review current local guidance and use a product registered for that crop and target. Follow the product label for dose, protective equipment, re-entry interval, and time between application and harvest. Keep a record of the treatment and scout again to assess whether it worked.
+
+FARMER QUESTIONS | ROMAN URDU AND ENGLISH
+
+Keera ya bimari ki pehchan kaise karun?
+Crop, district, crop age, affected area aur symptoms kab shuru huay note karein. Whole plant, patte ki dono sides aur affected stem ya fruit ki photos lein. Dekhein symptoms sirf ek patch mein hain ya poore field mein phail rahe hain.
+
+Kya ek patte par keera dekh kar spray kar doon?
+Field ke mukhtalif parts se sample count lein. Pest ko identify karke us crop aur sampling unit ka local economic threshold dekhein. Natural enemies aur crop stage bhi record karein.
+
+Spray ka naam aur dose bata dein.
+Pehle pest aur crop confirm karein. Registered product ka exact label, formulation aur crop use check karein. Label se dose, protective equipment, re-entry aur harvest interval follow karein. Product label ya diagnosis missing ho to exact dose ke liye local extension se confirm karein.
+
+Pichla spray kaam kyun nahi kar raha?
+Application date, product aur pest record dekhein. Coverage, barish, pest ki dobara entry aur ghalat identification mumkin reasons hain. Dobara scouting karein aur label ya extension guidance ke baghair dose barhane se bachein.
+
+Kya keera faidemand ho sakta hai?
+Haan. Ladybird beetles aur unke larvae aphids kha sakte hain. Pest ke saath predators ka count bhi note karein aur photo se insect identity confirm karein.
+
+Punjab ki current pest warning kahan milegi?
+Punjab Agriculture Department ke Pest Warning Services par current reports aur alerts dekhein. District aur crop stage match karein.
+https://agripunjab.punjab.gov.pk/index.php/pestwarning-services
+
+For local field advice, contact the district Agriculture Extension office. Confirm the district, crop stage and field conditions before applying a recommendation.
+https://www.agripunjab.gov.pk/AgricultralExtension

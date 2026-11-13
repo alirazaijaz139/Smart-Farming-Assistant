@@ -1,18 +1,46 @@
-CROP: RICE / PADDY (CHAWAL / DHAN) - PAKISTAN AGRICULTURAL GUIDE
+RICE / PADDY (CHAWAL / DHAN) | PUNJAB, PAKISTAN FARMING NOTES
 
-1. Nursery and Transplanting (Paneeri aur Muntaqili):
-- Nursery sowing time for Basmati varieties is May 20 to June 20.
-- Transplant 25 to 30 days old seedlings into puddled fields (Kaddoo).
-- Maintain plant-to-plant and row-to-row distance of 9 inches (80,000 plants per acre).
+Rice planting season and establishment
+Rice is a Kharif crop. A published Punjab crop calendar places rice sowing broadly in June and July. Nursery sowing (paneeri), transplanting and direct seeding are separate operations, so ask which date the farmer means. Confirm district, variety, and establishment method before suggesting a specific date. Follow the current local nursery and transplanting schedule for the chosen Basmati or coarse variety.
+Source: World Bank, Punjab crop calendar
+https://documents1.worldbank.org/curated/en/906921547616572396/pdf/133553-WP-P162446-PUBLIC-Punjab-Crop-Insurance-Web.pdf
 
-2. Approved Varieties (Iqsam):
-- Super Basmati, Basmati-515, Kisan Basmati, and PK-1121 Aromatic.
-- Hybrid coarse varieties include Arize-6, Guard-53, and Y-26.
+Nursery, transplanting and direct seeding
+Use certified seed suited to the district and select healthy seedlings for transplanting. Level the field for even water distribution and check bunds and drainage. For transplanted rice, follow the local guidance for seedling age and spacing. Direct-seeded rice needs its own weed and irrigation plan. Identify weeds early and track how uniformly the crop emerges.
 
-3. Water and Fertilizer Management:
-- Keep 1.5 to 2 inches of standing water for the first 15 days after transplanting to control weeds.
-- Apply 1.5 bags of DAP, 1.5 bags of Urea, and 1 bag of Potash per acre.
-- Apply Zinc Sulphate (33%) at 5 kg per acre 10 to 12 days after transplanting to prevent Zinc deficiency.
+Water and nutrients
+Match water management to the establishment method, crop stage, soil and irrigation access. Check field level and drainage if water pools unevenly. Plan fertilizer with soil-test results and local recommendations. If leaves show discoloration or patchy growth, check for pests, disease, water stress and nutrient problems before changing fertilizer.
 
-4. Harvesting:
-- Harvest when 80% to 85% of the grains in the panicle turn straw-colored.
+Pests and diseases
+Rice stem borers can cause dead hearts or white heads, depending on crop stage. Check affected stems for boring damage. Inspect folded leaves for leaf folder larvae. If leaf tips or margins develop spreading lesions, ask local extension staff to check for bacterial leaf blight and similar problems. Punjab Agriculture Department publishes rice scouting guides and economic thresholds.
+Sources: Punjab Agriculture Department, Literature and Economic Threshold Levels
+https://agripunjab.gov.pk/pw_literature
+https://agripunjab.gov.pk/node/9182
+
+Harvest and drying
+An indicator of harvest readiness is when about 80–85% of the grains on the panicle have turned straw-coloured. Check a representative sample and confirm grain moisture for the intended harvesting and drying method. Dry harvested paddy promptly and store it in clean, dry conditions.
+Source: JICA, Technical Manual on Rice Production
+https://openjicareport.jica.go.jp/pdf/1000022264_01.pdf
+
+FARMER QUESTIONS | ROMAN URDU AND ENGLISH
+
+Dhan ki paneeri aur transplant kab karun?
+District aur variety batayein. Punjab ke general crop calendar mein rice sowing June–July ke aas paas hai. Paneeri, transplanting aur direct seeding ki dates alag hoti hain. Current district guidance se har operation ki date confirm karein.
+
+Direct-seeded rice aur paneeri mein kya farq hai?
+Direct-seeded rice mein beej seedha main field mein boya jata hai. Transplanted rice mein seedlings pehle nursery mein ugti hain. Dono methods ka weed control aur pani ka plan alag hota hai.
+
+Dhan ke patte peele hain. Khaad daal doon?
+Pehle field pattern, pani ki depth, affected leaf ki age aur recent fertilizer check karein. Nutrient problem, water stress aur disease ki signs milti julti ho sakti hain. Soil test aur local confirmation ke baad fertilizer adjust karein.
+
+Dhan ka beech wala shoot sukh gaya ya bali safed hai. Kya wajah ho sakti hai?
+Early stage mein dead heart aur reproductive stage mein white head stem borer ke clues hain. Stem ko check karein aur dekhein ke boring damage ya larva milta hai. Field scouting se affected tillers ka proportion record karein.
+
+Dhan ka patta lipta hua hai. Kya check karun?
+Fold ko khol kar larva aur andar feeding marks dekhein. Mukhtalif parts se samples lein aur current Punjab scouting advisory ke mutabiq count interpret karein.
+
+Dhan kab kaatna hai aur kaatne ke baad kya karun?
+Field ke mukhtalif parts mein grain color dekhein. Jab takreeban 80–85% grains straw-colored hon, grain moisture aur harvester ki requirements check karein. Kaatne ke baad paddy ko jaldi dry karke saaf aur dry jagah store karein.
+
+For local field advice, contact the district Agriculture Extension office. Confirm the district, crop stage and field conditions before applying a recommendation.
+https://www.agripunjab.gov.pk/AgricultralExtension

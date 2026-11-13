@@ -1,17 +1,44 @@
-CROP: COTTON (KAPAS) - PAKISTAN AGRICULTURAL GUIDE
+COTTON (KAPAS) | PUNJAB, PAKISTAN FARMING NOTES
 
-1. Sowing Time and Seed Rate:
-- Early sowing starts from February 15 to March 31.
-- Normal sowing season is April 1 to May 15.
-- Use 6 to 8 kg of delinted seed per acre with germination rate above 75%.
+Cotton sowing season and variety
+Cotton is a Kharif crop. A published Punjab crop calendar describes March to May as the general cotton sowing season. For a specific field, use the current district window and choose certified seed of a locally approved variety. Early sowing advice can differ by zone and year. Ask for district, irrigation access, planting method, and variety before giving a specific schedule or seed rate.
+Sources: World Bank, Punjab crop calendar
+https://documents1.worldbank.org/curated/en/906921547616572396/pdf/133553-WP-P162446-PUBLIC-Punjab-Crop-Insurance-Web.pdf
+Punjab Agriculture Department, Research Institutes
+https://agripunjab.gov.pk/research_inst
 
-2. Varieties (Iqsam):
-- Triple-gene and double-gene BT varieties like IUB-2013, MNH-1020, FH-Lalazar, and Cyto-535.
+Establishment, irrigation and nutrients
+Prepare a field that can drain after irrigation or heavy rain. Check emergence and plant stand after sowing. Decide irrigation timing from the planting method, soil moisture, weather, and stage of growth. Pay attention to moisture during flowering and boll development. Use soil-test results and local recommendations for fertilizer rates and application timing. Monitor weeds early while the cotton canopy is still open.
 
-3. Irrigation and Fertilizers:
-- First irrigation for bed-sown cotton should be applied 3 to 4 days after sowing, followed by a second irrigation after 7 to 10 days.
-- Apply 1 bag of DAP, 2.5 to 3 bags of Urea (in 3 splits), and 1 bag of SOP per acre.
+Whitefly, jassid and pink bollworm scouting
+Inspect leaves from several parts of the field. Check leaf undersides for whitefly (safaid makhi) and jassid (sabz tela). Whitefly can spread cotton leaf curl disease. Inspect bolls for pink bollworm (gulabi sundi), including internal damage when a sampled boll is opened. Pheromone traps help track moth activity. Use boll sampling and local advice to decide what action is needed.
+Punjab Agriculture Department thresholds include 5 whitefly adults or nymphs combined per leaf, 1 jassid adult or nymph per leaf, and 5 pink bollworm larvae per 100 bolls. Compare counts with the local sampling method and current district advisory.
+Sources: Punjab Agriculture Department, Pest Scouting and Economic Threshold Levels
+https://agripunjab.gov.pk/pest-scouting
+https://agripunjab.gov.pk/node/9182
 
-4. Weed and Canopy Management:
-- Keep the field weed-free for the first 45 to 60 days after sowing.
-- Ensure proper drainage during monsoon rains as cotton is sensitive to waterlogging.
+Picking and postharvest
+Pick open bolls when the cotton is dry. Keep soil, leaves, plastic and other contaminants out of picked cotton. After the last picking, follow district guidance for crop residue and volunteer plant management where pink bollworm is a concern.
+
+FARMER QUESTIONS | ROMAN URDU AND ENGLISH
+
+Kapas kab kasht karun? / Cotton sowing time
+Punjab crop calendar March–May ki broad window deta hai. Exact date district, season ki advisory aur variety se confirm karein. Early sowing ke liye apne district ki current recommendation dekhein.
+
+Kapas ka beej kam uga. Kya check karun?
+Field ke kuch hisson mein beej khod kar dekhein. Sowing depth, soil moisture, surface crust aur seed germination record check karein. Replanting se pehle missing patches aur remaining plant stand ka andaza lagayein.
+
+Kapas ke patte mur rahe hain. Whitefly hai ya jassid?
+Patte ke neeche insects count karein aur patte ki edges aur veins ki close photo lein. Curling ki ek se zyada wajah ho sakti hain. Recent spray aur fertilizer, crop age aur affected area bhi note karein.
+
+Kapas ke bolls bahar se theek hain, andar kharab hain. Kya karun?
+Mukhtalif plants se bolls sample karke kholein aur larvae ya feeding damage record karein. Pink bollworm ke liye pheromone traps moth activity batate hain. Punjab ka boll-sampling threshold 5 larvae per 100 bolls hai.
+
+Barish ke baad kapas mein pani khara hai. Kya karun?
+Jahan mumkin ho drainage ka rasta kholein. Dobara irrigation se pehle soil moisture check karein. Neeche walay patches mein plant stress aur crop damage ka record rakhein.
+
+Kapas ki picking kab karun?
+Jab bolls khul jayein aur kapas dry ho tab picking karein. Mitti, patte aur plastic ko cotton se alag rakhein.
+
+For local field advice, contact the district Agriculture Extension office. Confirm the district, crop stage and field conditions before applying a recommendation.
+https://www.agripunjab.gov.pk/AgricultralExtension

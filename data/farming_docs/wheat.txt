@@ -1,22 +1,46 @@
-CROP: WHEAT (GANDUM) - PAKISTAN AGRICULTURAL GUIDE
+WHEAT (GANDUM) | PAKISTAN FARMING NOTES
 
-1. Sowing Time (Waqt-e-Kasht):
-- Optimal sowing time in Punjab and Sindh is from November 1 to November 20.
-- Late sowing after December 10 reduces yield by 1% to 1.5% per day.
+Wheat growing duration in Pakistan
+Wheat is a winter (Rabi) crop. The Pakistan Meteorological Department reports that wheat in Punjab is commonly sown in November and December and harvested in April and May. A PMD field study in Faisalabad recorded 148 days from sowing to full maturity for Galaxy-13 in 2015–16, around five months. The report gives 140 days as its local comparison. Use the Faisalabad result as a local example. Actual duration varies with variety, sowing date, and seasonal weather.
+Source: Pakistan Meteorological Department, Crop Development in Central Punjab
+https://namc.pmd.gov.pk/assets/crop-reports/1910803754crop-report-Faisalabad-wheat-2015-16.pdf
 
-2. Seed Rate and Varieties (Beej aur Iqsam):
-- Recommended seed rate for timely sowing is 40 to 50 kg per acre.
-- For late sowing (December), increase seed rate to 50 to 60 kg per acre.
-- Approved varieties include Akbar-2019, Dilkash-2020, Subhani-2021, and Arooj-2022.
+Sowing and seed selection
+For a sowing recommendation, establish the district, whether the field is irrigated or rainfed (barani), and the intended variety. Use the district's current sowing window and certified seed suited to local conditions. Choose locally recommended rust-resistant varieties where available. Track the actual sowing date so later irrigation and scouting notes can be tied to crop stage.
 
-3. Fertilizer Management (Khadon ka Istimal):
-- Apply 1.5 to 2 bags of DAP and 1 bag of SOP/MOP at the time of land preparation.
-- Apply 2 to 2.5 bags of Urea in two split doses with first and second irrigation.
+Water, nutrients and weeds
+Plan irrigation around crop stage, soil moisture and rainfall. Early tillering and crown-root establishment, heading and grain development are useful stages for checking moisture needs. The Faisalabad PMD trial recorded its first irrigation at 23 days after sowing, followed by irrigations at tillering and heading. This describes that field and season. Use a soil test and a local recommendation to set fertilizer rates. Scout early for grassy weeds such as dumbi sitti and wild oat, and identify the weed before selecting a control method.
 
-4. Irrigation Schedule (Aabpashi):
-- First irrigation (Kor) should be applied 20 to 25 days after sowing (Crown Root Initiation stage).
-- Critical stages for water are Tillering, Booting, and Grain Filling.
-- Total 4 to 5 irrigations are required depending on rainfall.
+Wheat rust and aphids
+Yellow rust (peeli kungi) can form yellow-orange stripes along the leaf. Rust and nutrient stress can both cause visible discoloration, so check symptoms closely and seek local confirmation if the cause is unclear. For aphids (tela), check multiple tillers and record both aphid numbers and natural enemies. Punjab Agriculture Department lists an aphid economic threshold of 25 per tiller. Use the local scouting method when applying this threshold.
+Source: Punjab Agriculture Department, Economic Threshold Levels
+https://agripunjab.gov.pk/node/9182
 
-5. Harvesting (Katai):
-- Harvest when grain moisture drops below 12% to 14% and stalks turn golden yellow.
+Harvest
+Check grain and straw maturity across the field before harvesting. Look for dry, firm grain and check moisture against the requirements of the harvesting method and storage plan. Keep grain dry and monitor stored grain for moisture and pests.
+
+FARMER QUESTIONS | ROMAN URDU AND ENGLISH
+
+Gandum kitne din mein tayyar hoti hai? / How long does wheat take?
+Faisalabad mein PMD ke ek field trial mein Galaxy-13 wheat 148 din mein full maturity tak pohanchi. Punjab mein gandum aam tor par November–December mein boi aur April–May mein kaati jati hai. Apni variety, kasht ki date aur district batayein agar local estimate chahiye.
+
+Gandum ke liye kaunsa beej aur kitna seed per acre?
+District, irrigated ya barani field, sowing date, seed germination aur drill ya broadcast method batayein. In cheezon ke mutabiq local certified variety aur seed rate select karein.
+
+Gandum ka pehla pani kab lagana hai?
+Pehle kasht ki date, mitti ki nami aur barish check karein. Crown-root establishment ke waqt nami check karna zaroori hai. Faisalabad ke PMD trial mein pehla pani 23 din baad laga tha. Apni field ka schedule stage aur soil moisture se tay karein.
+
+Gandum peeli kyun ho rahi hai? / Wheat yellow leaves
+Dekhein peelay rang ki lines aur powder jaisay pustules hain ya patta ek jaisa peela hai. Lines rust ka clue ho sakti hain. Pani khara rehna aur nutrient problems bhi peela pan de sakti hain. Photo, crop age, recent barish aur fertilizer history se shuru karein.
+
+Gandum ko kitni urea ya DAP chahiye?
+Mitti ka test, acre, pehle se dali hui khaad aur fasal ki stage batayein. Local recommendation se per-acre dose lein. Total quantity nikalne ke liye verified per-acre dose ko acres se multiply karein.
+
+Gandum mein dumbi sitti ka kya karun?
+Dumbi sitti ek grassy weed hai. Patte aur plant base ki clear photo lein aur wheat stage note karein. Local extension se weed confirm karwa kar us stage ke liye control select karein.
+
+Gandum gir gayi hai. Kya check karun?
+Affected area, recent wind ya rain, stem damage aur grain stage dekhein. Field mein pani khara ho to drainage check karein. Harvest ka waqt grain maturity aur field access ke mutabiq tay karein.
+
+For local field advice, contact the district Agriculture Extension office. Confirm the district, crop stage and field conditions before applying a recommendation.
+https://www.agripunjab.gov.pk/AgricultralExtension
